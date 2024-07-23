@@ -2,6 +2,7 @@ import { Heading, Spinner } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import ExpendableText from "../components/ExpendableText";
 import GameAttributes from "../components/GameAttributes";
+import GameScreenshots from "../components/GameScreenshots";
 import GameTrailer from "../components/GameTrailer";
 import useGame from "../hooks/useGame";
 
@@ -19,6 +20,7 @@ const GameDetailPage = () => {
 
       <GameAttributes game={game} />
       <GameTrailer gameId={game.id} />
+      <GameScreenshots gameId={game.id} />
     </>
   );
 };
