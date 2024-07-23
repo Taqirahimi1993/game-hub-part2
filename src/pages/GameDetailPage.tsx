@@ -1,7 +1,7 @@
-import { Heading, Spinner, Text } from "@chakra-ui/react";
-import React from "react";
+import { Heading, Spinner } from "@chakra-ui/react";
 import { useParams } from "react-router-dom";
 import ExpendableText from "../components/ExpendableText";
+import GameAttributes from "../components/GameAttributes";
 import useGame from "../hooks/useGame";
 
 const GameDetailPage = () => {
@@ -15,6 +15,8 @@ const GameDetailPage = () => {
     <>
       <Heading>{game?.name}</Heading>
       <ExpendableText>{game.description_raw}</ExpendableText>
+
+      <GameAttributes game={game} />
     </>
   );
 };
